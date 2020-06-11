@@ -47,7 +47,7 @@ export class CadastroMarcaComponent implements OnInit {
     this.formulario.enable();
     this.formGroupDirective.resetForm();
 
-    this.snackBar.open('Cadastro da Marca efetuado com sucesso!');
+    this.snackBar.open('Cadastro da Marca realizado.');
 
   }
 
