@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "carrostore-af035": {
+      "hosting": {
+        "CarroStore": [
+          "carrostore-af035"
+        ]
+      }
+    }
+  }
+}
