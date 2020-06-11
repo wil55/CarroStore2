@@ -20,7 +20,7 @@ const routes: Routes = [
 
   {path: 'produtos/:id/edicao', component: EdicaoProdutoComponent},
   {path: 'marcas/:id/edicao', component: EdicaoMarcaComponent}, // 
-  {path: 'categorias/:id/edicao', component: EdicaoCategoriaComponent},
+  {path: 'categorias/:id/edicao', component: EdicaoCategoriaComponent}, 
   {path: 'cor/:id/edicao', component: EdicaoCorComponent},
 
   {path: 'produtos/:id/edicao/imagens', component: EdicaoListaImagemProdutoComponent}
