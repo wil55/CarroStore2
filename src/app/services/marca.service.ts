@@ -18,6 +18,7 @@ export class MarcaService {
 
     const dados = document.data();
 
+    
     const marca = {
       id: document.id,
       ...dados
