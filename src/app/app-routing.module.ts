@@ -9,10 +9,18 @@ import { EdicaoProdutoComponent } from './edicao-produto/edicao-produto.componen
 import { EdicaoCategoriaComponent } from './edicao-categoria/edicao-categoria.component';
 import { EdicaoCorComponent } from './edicao-cor/edicao-cor.component';
 import { EdicaoListaImagemProdutoComponent } from './edicao-lista-imagem-produto/edicao-lista-imagem-produto.component';
-
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 
 const routes: Routes = [
   
+
+  
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+
+  { path: 'usuarios/cadastro', component: CadastroUsuarioComponent },
   {path: 'marcas/cadastro', component: CadastroMarcaComponent}, //
   {path: 'produtos/cadastro', component: CadastroProdutoComponent}, // 
   {path: 'categoria/cadastro', component: CadastroCategoriaComponent},

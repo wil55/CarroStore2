@@ -40,6 +40,9 @@ import { CadastroCategoriaComponent } from './cadastro-categoria/cadastro-catego
 import { CadastroCorComponent } from './cadastro-cor/cadastro-cor.component';
 import { EdicaoCategoriaComponent } from './edicao-categoria/edicao-categoria.component';
 import { EdicaoCorComponent } from './edicao-cor/edicao-cor.component';
+import { LoginComponent } from './login/login.component';
+import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -55,6 +58,9 @@ import { EdicaoCorComponent } from './edicao-cor/edicao-cor.component';
     CadastroCorComponent,
     EdicaoCategoriaComponent,
     EdicaoCorComponent,
+    LoginComponent,
+    CadastroUsuarioComponent,
+    HomeComponent,
     
    
   ],
