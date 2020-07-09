@@ -15,7 +15,7 @@ class Autenticacao {
 })
 export class LoginComponent implements OnInit {
 
-    erro: boolean;
+  erro: boolean;
 
     formulario = this.formBuilder.group({
         email: ['', [Validators.required, Validators.email]],
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
 
     async submit() {
 
-        this.erro = false;
+      this.erro = false;
 
         if (!this.formulario.valid) {
             return;
@@ -45,15 +45,14 @@ export class LoginComponent implements OnInit {
 
         try {
 
-            const userCredential = await this.auth.signInWithEmailAndPassword(autenticacao.email, autenticacao.senha);
-
-            this.router.navigate(['home']);
+          const userCredential = await this.auth.signInWithEmailAndPassword(autenticacao.email, autenticacao.senha);
+          this.router.navigate(['home']);
 
         } catch (error) {
 
-            this.erro = true;
-            this.formulario.enable();
-
+          this.erro = true;
+          this.formulario.enable();
+          
         }
 
     }

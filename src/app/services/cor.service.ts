@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
-import { Cor } from '../../../../lojaMotos2-master - 08-06-2020/src/app/models/cor';
+import { Cor } from '../models/cor';
+
+
 
 @Injectable({
   providedIn: 'root'

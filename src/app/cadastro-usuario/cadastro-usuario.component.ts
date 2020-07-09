@@ -1,82 +1,85 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
 import { Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { UsuariosService } from '../services/usuarios.service';
+import { Location } from '@angular/common';
 import { Usuario } from '../models/usuario.model';
 
 class NovoUsuario {
-    nome: string;
-    email: string;
-    senha: string;
+  nome: string;
+  email: string;
+  senha: string;
+
 }
 
 @Component({
-    selector: 'app-cadastro-usuario',
-    templateUrl: './cadastro-usuario.component.html',
-    styleUrls: ['./cadastro-usuario.component.scss']
+  selector: 'app-cadastro-usuario',
+  templateUrl: './cadastro-usuario.component.html',
+  styleUrls: ['./cadastro-usuario.component.scss']
 })
 export class CadastroUsuarioComponent implements OnInit {
 
-    usuarioJaCadastrado: boolean;
+  
 
-    formulario = this.formBuilder.group({
-        nome: ['', Validators.required],
-        email: ['', [Validators.required, Validators.email]],
-        senha: ['', Validators.required],
-        confirmacaoSenha: ['', Validators.required],
-    });
+  usuarioJaCadastrado: boolean;
 
-    constructor(
-        private formBuilder: FormBuilder,
-        private location: Location,
-        private router: Router,
-        private auth: AngularFireAuth,
-        private usuariosService: UsuariosService,
-    ) { }
+  formulario = this.formBuilder.group({
+      nome: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      senha: ['', Validators.required],
+      confirmacaoSenha: ['', Validators.required],
+  });
 
-    ngOnInit(): void {
-    }
+  constructor(
+      private formBuilder: FormBuilder,
+      private location: Location,
+      private router: Router,
+      private auth: AngularFireAuth,
+      private usuariosService: UsuariosService,
+  ) { }
 
-    async submit() {
+  ngOnInit(): void {
+  }
 
-        if (!this.formulario.valid) {
-            return;
-        }
+  async submit() {
 
-        this.formulario.disable();
+      if (!this.formulario.valid) {
+          return;
+      }
 
-        const novoUsuario = this.formulario.value as NovoUsuario;
+      this.formulario.disable();
 
-        try {
+      const novoUsuario = this.formulario.value as NovoUsuario;
 
-            const userCredential = await this.auth.createUserWithEmailAndPassword(novoUsuario.email, novoUsuario.senha);
-            const uid = userCredential.user.uid;
+      try {
 
-            let usuario = {
-                email: novoUsuario.email,
-                nome: novoUsuario.nome
-            } as Usuario;
+          const userCredential = await this.auth.createUserWithEmailAndPassword(novoUsuario.email, novoUsuario.senha);
+          const uid = userCredential.user.uid;
 
-            usuario = await this.usuariosService.add(uid, usuario);
+          let usuario = {
+              email: novoUsuario.email,
+              nome: novoUsuario.nome
+          } as Usuario;
 
-            this.router.navigate(['home']);
+          usuario = await this.usuariosService.add(uid, usuario);
 
-        } catch (error) {
+          this.router.navigate(['home']);
 
-            console.log(error);
-            this.usuarioJaCadastrado = true;
+      } catch (error) {
 
-            this.formulario.enable();
+          console.log(error);
+          this.usuarioJaCadastrado = true;
 
-        }
+          this.formulario.enable();
+
+      }
 
 
-    }
+  }
 
-    voltar() {
-        this.location.back();
-    }
+  voltar() {
+      this.location.back();
+  }
 
 }

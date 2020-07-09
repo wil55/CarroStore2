@@ -38,5 +38,26 @@ export class UsuariosService {
         return this.convertToUsuario(document);
 
     }
+    
+    async getUsuarioLogado(): Promise<Usuario> {
+
+        return new Promise<Usuario>(resolve => {
+
+            this.auth.user.subscribe(user => {
+
+
+
+                if (user) {
+                    const id = user.uid;
+                    resolve(this.get(id));
+                } else {
+                    resolve(null);
+                }
+
+            });
+
+        });
+
+    }
 
 }

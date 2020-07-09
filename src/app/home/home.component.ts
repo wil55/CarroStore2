@@ -1,22 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { Usuario } from '../models/usuario.model';
+import { UsuariosService } from '../services/usuarios.service';
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
 
-    constructor(public auth: AngularFireAuth) { }
+  usuario: Usuario;
 
-    async ngOnInit(): Promise<void> {
+  constructor(
+    public auth: AngularFireAuth,
+    private usuariosService: UsuariosService
+    ) { }
 
-    }
+  async ngOnInit(): Promise<void> {
 
-    async sair() {
-        await this.auth.signOut();
-    }
+    this.usuario = await this.usuariosService.getUsuarioLogado();
+  }
 
+  async sair(){
+    await this.auth.signOut();
+  }
 
 }

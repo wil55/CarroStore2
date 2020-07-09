@@ -5,13 +5,13 @@ import { Potencia } from '../models/potencia.model';
 @Injectable({
   providedIn: 'root'
 })
-export class CilindradaService {
+export class PotenciaService {
   
   constructor(private firestore: AngularFirestore) { }
 
-  async add(cilindrada: Potencia): Promise<Potencia> {
+  async add(potencia: Potencia): Promise<Potencia> {
 
-    const docRef = await this.firestore.collection<Potencia>("potencia").add(Potencia);
+    const docRef = await this.firestore.collection<Potencia>("potencia").add(potencia);
     const doc = await docRef.get();
 
     return {
@@ -20,4 +20,5 @@ export class CilindradaService {
     } as Potencia;
 
   }
+
 }
