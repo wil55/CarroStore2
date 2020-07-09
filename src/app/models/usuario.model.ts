@@ -1,5 +1,7 @@
-export class Usuario {
+export class Usuario{
+    
     id: string;
     nome: string;
     email: string;
+    permissao: string;
 }

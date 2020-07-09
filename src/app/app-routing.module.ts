@@ -12,27 +12,39 @@ import { EdicaoListaImagemProdutoComponent } from './edicao-lista-imagem-produto
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
+import { ProdutosComponent } from './produtos/produtos.component';
+import { CarrinhoComponent} from './carrinho/carrinho.component';
+
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   
-
   
-  { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+  { path: 'usuarios/cadastro', component: CadastroUsuarioComponent },
+  {
+  path: 'home', component: HomeComponent,
+  children: [
 
   { path: 'usuarios/cadastro', component: CadastroUsuarioComponent },
+  { path: 'produtos', component: ProdutosComponent },
   {path: 'marcas/cadastro', component: CadastroMarcaComponent}, //
   {path: 'produtos/cadastro', component: CadastroProdutoComponent}, // 
   {path: 'categoria/cadastro', component: CadastroCategoriaComponent},
   {path: 'cor/cadastro', component: CadastroCorComponent}, //
+  { path: 'carrinho', component: CarrinhoComponent, canActivate: [AuthGuard] },
 
-  {path: 'produtos/:id/edicao', component: EdicaoProdutoComponent},
-  {path: 'marcas/:id/edicao', component: EdicaoMarcaComponent}, //
-  {path: 'categorias/:id/edicao', component: EdicaoCategoriaComponent}, 
-  {path: 'cor/:id/edicao', component: EdicaoCorComponent},
+  { path: 'marcas/:id/edicao', component: EdicaoMarcaComponent, canActivate: [AuthGuard]},
+  { path: 'categorias/:id/edicao', component: EdicaoCategoriaComponent, canActivate: [AuthGuard]},
+  { path: 'cores/:id/edicao', component: EdicaoCorComponent, canActivate: [AuthGuard]},
 
+  { path: 'produtos/:id/edicao', component: EdicaoProdutoComponent},
   {path: 'produtos/:id/edicao/imagens', component: EdicaoListaImagemProdutoComponent}
-  
+  ]
+
+},
+
 ];
 
 @NgModule({

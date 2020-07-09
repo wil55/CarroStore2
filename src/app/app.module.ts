@@ -28,6 +28,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { environment } from 'src/environments/environment';
 import { EdicaoMarcaComponent } from './edicao-marca/edicao-marca.component';
@@ -43,6 +47,9 @@ import { EdicaoCorComponent } from './edicao-cor/edicao-cor.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { HomeComponent } from './home/home.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { CaixaMensagemComponent } from './caixa-mensagem/caixa-mensagem.component';
+import { ProdutosComponent } from './produtos/produtos.component';
 
 
 @NgModule({
@@ -61,6 +68,10 @@ import { HomeComponent } from './home/home.component';
     LoginComponent,
     CadastroUsuarioComponent,
     HomeComponent,
+    CarrinhoComponent,
+    CaixaMensagemComponent,
+    
+    ProdutosComponent,
     
    
   ],
@@ -83,7 +94,11 @@ import { HomeComponent } from './home/home.component';
     MatIconModule,
     MatProgressSpinnerModule,
     MatSelectModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatListModule,
+    MatCheckboxModule, 
 
   ],
   providers: [

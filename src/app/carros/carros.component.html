@@ -1,0 +1,29 @@
+<div class="container">
+
+    <div class="lista" fxLayout="row" fxFlex fxLayoutGap="16px" fxLayoutAlign="start start">
+
+        <div fxFlex="328px">
+            <mat-list>
+
+                <mat-divider></mat-divider>
+
+                <!-- Estilos -->
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <mat-icon class="subheader-icon">palette</mat-icon>
+                    <div mat-subheader>Modelo</div>
+                </div>
+                <mat-list-item *ngFor="let carro of carros | async">
+                    <mat-checkbox color="primary">{{carro.nome}}</mat-checkbox>
+                    <div fxFlex>
+                    </div>
+                    <button mat-icon-button color="accent" *ngIf="usuarioAdmin()"
+                        [routerLink]="['/home/carro', carro.id, 'edicao']">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                </mat-list-item>
+
+
+         
+
+
+

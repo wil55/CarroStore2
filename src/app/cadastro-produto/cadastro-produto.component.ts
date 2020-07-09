@@ -42,7 +42,8 @@ export class CadastroProdutoComponent implements OnInit {
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
     private corService: CorService,
-    private snackBar: MatSnackBar,
+    private snackBar: MatSnackBar, 
+    
     private location: Location
   ) { }
     

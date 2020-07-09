@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-
+import { PotenciaService } from './potencia.service';
 
 describe('PotenciaService', () => {
   let service: PotenciaService;

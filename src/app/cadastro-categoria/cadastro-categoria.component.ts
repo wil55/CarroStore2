@@ -19,7 +19,7 @@ export class CadastroCategoriaComponent implements OnInit {
   @ViewChild(FormGroupDirective) formGroupDirective: FormGroupDirective;
 
   constructor(
-    private formBuilder: FormBuilder,
+    private formBuilder: FormBuilder, 
     private categoriaService: CategoriaService,
     private snackBar: MatSnackBar,
     private location: Location

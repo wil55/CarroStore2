@@ -28,6 +28,7 @@ export class EdicaoImagemProdutoComponent implements OnInit, OnDestroy {
   private uploadTask: AngularFireUploadTask;
 
   private percentageChangesSubscription: Subscription;
+  
   private snapshotChangesSubscription: Subscription;
 
   constructor(private fireStorage: AngularFireStorage) { }

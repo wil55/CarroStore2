@@ -1,5 +1,4 @@
 export class Produto {
-
     id: string;
     nome: string;
     potencia: number;
@@ -9,8 +8,8 @@ export class Produto {
     
     imagens: string[];
 
-    idMarca: string; // Yamaha, Honda, Kawasaki
-    idCategoria: string; // Naked, Esportiva, Big Trail
-    idCores: string; // Azul e prata, vermelho, preto
+    idMarca: string; 
+    idCategoria: string; 
+    idCores: string; 
 
 }

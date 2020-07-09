@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Categoria } from '../../../../lojaMotos2-master - 08-06-2020/src/app/models/categoria.model';
+import { Categoria } from '../models/categoria.model';
+
 import { Observable } from 'rxjs';
 
 @Injectable({

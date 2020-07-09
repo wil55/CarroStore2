@@ -8,7 +8,7 @@
             </div>
 
             <mat-card-title>Login</mat-card-title>
-            <mat-card-subtitle>Entre com as informações abaixo para acessar a aplicação</mat-card-subtitle>
+            <mat-card-subtitle>Preencha as informações abaixo!</mat-card-subtitle>
 
         </mat-card-header>
 
@@ -27,13 +27,14 @@
                 <mat-error *ngIf="formulario.controls['senha'].hasError('required')">A senha é obrigatória</mat-error>
             </mat-form-field>
 
-            <mat-error *ngIf="erro">O usuário não existe ou a senha está incorreta</mat-error>
+            <mat-error *ngIf="erro">Email e Senha incorreto!</mat-error>
 
         </mat-card-content>
 
         <mat-card-actions>
 
             <div fxLayout="row">
+                
 
                 <span fxFlex></span>
 
