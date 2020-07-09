@@ -22,7 +22,7 @@ export class CadastroCorComponent implements OnInit {
     private formBuilder: FormBuilder,
     private corService: CorService,
     private snackBar: MatSnackBar,
-    private location: Location
+    private location: Location,
     ) {
 
    }
