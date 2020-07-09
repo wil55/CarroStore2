@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+
+export class Mensagem {
+  titulo: string;
+  texto: string;
+  acoes: string[];
+}
 
 @Component({
   selector: 'app-caixa-mensagem',
@@ -7,9 +14,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CaixaMensagemComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(MAT_DIALOG_DATA) public mensagem: Mensagem) { }
 
-  
   ngOnInit(): void {
   }
 

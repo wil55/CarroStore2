@@ -32,6 +32,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { environment } from 'src/environments/environment';
 import { EdicaoMarcaComponent } from './edicao-marca/edicao-marca.component';
@@ -50,6 +51,7 @@ import { HomeComponent } from './home/home.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { CaixaMensagemComponent } from './caixa-mensagem/caixa-mensagem.component';
 import { ProdutosComponent } from './produtos/produtos.component';
+
 
 
 @NgModule({
@@ -99,6 +101,7 @@ import { ProdutosComponent } from './produtos/produtos.component';
     MatMenuModule,
     MatListModule,
     MatCheckboxModule, 
+    MatDialogModule
 
   ],
   providers: [

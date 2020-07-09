@@ -1,1 +1,9 @@
-<p></p>
+<h1 mat-dialog-title>{{mensagem.titulo}}</h1>
+
+<mat-dialog-content>
+    <p>{{mensagem.texto}}</p>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button *ngFor="let acao of mensagem.acoes" [mat-dialog-close]="acao">{{acao}}</button>
+</mat-dialog-actions>
