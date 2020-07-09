@@ -1,6 +1,5 @@
 export const environment = {
   production: true,
-  
   firebaseConfig:  {
     apiKey: "AIzaSyBoZgHBAyEOXJQvaCvEbzUqF1zc1T3Alsc",
     authDomain: "carrostore-af035.firebaseapp.com",
