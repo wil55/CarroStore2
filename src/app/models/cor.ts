@@ -3,4 +3,5 @@ export class Cor{
     cor: string;
     dataCadastro: Date;
     dataEdicao: Date;
+    
 }
