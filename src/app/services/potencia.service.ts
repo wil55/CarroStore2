@@ -19,6 +19,7 @@ export class PotenciaService {
     return {
       idPotencia: doc.id,
       ...doc.data()
+      
     } as Potencia;
 
   }
