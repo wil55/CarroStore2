@@ -1,6 +1,6 @@
 export class Cor {
     id: string;
-    cores: string;
+    cor: string;
     dataCadastro: Date;
     dataEdicao: Date;
 }
