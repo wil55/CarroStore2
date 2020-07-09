@@ -24,6 +24,7 @@ export class EdicaoCorComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private corService: CorService,
+    
     private snackBar: MatSnackBar,
     private location: Location,
     private activedRoute: ActivatedRoute

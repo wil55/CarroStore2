@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Categoria } from '../models/categoria.model';
+
 import { Observable } from 'rxjs';
 
 @Injectable({

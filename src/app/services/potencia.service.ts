@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore/firestore';
+
 import { Potencia } from '../models/potencia.model';
+
 
 @Injectable({
   providedIn: 'root'

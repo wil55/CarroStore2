@@ -11,6 +11,7 @@ export class Imagem {
 @Component({
   selector: 'app-edicao-lista-imagem-produto',
   templateUrl: './edicao-lista-imagem-produto.component.html',
+  
   styleUrls: ['./edicao-lista-imagem-produto.component.scss']
 })
 export class EdicaoListaImagemProdutoComponent implements OnInit {

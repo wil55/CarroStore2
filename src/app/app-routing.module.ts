@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { CarrinhoComponent} from './carrinho/carrinho.component';
+
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [

@@ -15,6 +15,7 @@ export class AdminGuard implements CanActivate {
 
     async canActivate(
         next: ActivatedRouteSnapshot,
+        
         state: RouterStateSnapshot): Promise<boolean> {
 
         const usuario = await this.usuariosService.getUsuarioLogado();

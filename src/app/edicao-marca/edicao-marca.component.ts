@@ -17,6 +17,7 @@ export class EdicaoMarcaComponent implements OnInit {
   marca: Marca;
 
   formulario = this.formBuilder.group({
+    
     nome  : ['', Validators.required]
   });
 

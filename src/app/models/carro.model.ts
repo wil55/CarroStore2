@@ -1,5 +1,4 @@
 export class Carro {
-
     id: string;
     nome: string;
     descricao: string;

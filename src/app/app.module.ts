@@ -70,6 +70,7 @@ import { ProdutosComponent } from './produtos/produtos.component';
     HomeComponent,
     CarrinhoComponent,
     CaixaMensagemComponent,
+    
     ProdutosComponent,
     
    

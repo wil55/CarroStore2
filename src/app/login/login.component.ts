@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
 
     async submit() {
 
+      
       this.erro = false;
 
         if (!this.formulario.valid) {

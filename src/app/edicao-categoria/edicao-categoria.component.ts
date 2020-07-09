@@ -25,6 +25,7 @@ export class EdicaoCategoriaComponent implements OnInit {
     private formBuilder: FormBuilder,
     private categoriaService: CategoriaService,
     private snackBar: MatSnackBar,
+    
     private location: Location,
     private activedRoute: ActivatedRoute
     ) {

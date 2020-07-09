@@ -1,5 +1,4 @@
 export class Produto {
-
     id: string;
     nome: string;
     potencia: number;
